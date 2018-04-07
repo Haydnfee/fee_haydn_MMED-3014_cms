@@ -1,5 +1,5 @@
 <?php
-    require_once("config.php");
+    require_once('config.php');
 
     if(isset($_GET['caller_id'])){
         $dir = $_GET['caller_id'];
@@ -8,9 +8,9 @@
         }else if($dir == 'delete'){
             $id = $_GET['id'];
             deleteUser($id);
-
-        }else{
-            echo "ID was passed incorrectly"
+        }else {
+            echo "Caller ID was passed incorrectly";
         }
     }
+
 ?>

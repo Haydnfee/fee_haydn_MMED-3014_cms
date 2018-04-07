@@ -28,18 +28,15 @@
     <?php
         if(!is_string($getMovies)){
             while($row = mysqli_fetch_array($getMovies)){
-				echo "<img src=\"images/{$row['movies_cover']}\" alt=\"{$row['movies_title']}\">
-				<h2>{$row['movies_title']}</h2>
-				<p>{$row['movies_year']}</p>
-				<a href=\"details.php?id={$row['movies_id']}\">See Details</a><br><br>";
+				echo "<img src=\"images/{$row['movie_cover']}\" alt=\"{$row['movie_title']}\">
+				<h2>{$row['movie_title']}</h2>
+				<p>{$row['movie_year']}</p>
+				<a href=\"details.php?id={$row['movie_id']}\">See Details</a><br><br>";
             }
             
         } else {
             echo "<p class=\"error\">{$getMovies}</p>";
         }
-    ?>
-    <?php 
-        include('includes/footer.html');
     ?>
     
 </body>

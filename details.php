@@ -32,7 +32,7 @@
             if($runFilter){
                 return $runFilter;
             }else{
-                error = "There was an error while fetching the movie information";
+                $error "There was an error while fetching the movie information";
                 return $error;
             }
         }

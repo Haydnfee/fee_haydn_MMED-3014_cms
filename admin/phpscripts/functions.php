@@ -1,9 +1,10 @@
 <?php
-    function redirect _to ($location) {
-        if($locatin != NULL) {
-            header("location: {$location}");
-            exit;
-        }
-    }
-
+	
+	function redirect_to($location) {
+		if($location != NULL) {
+			header("Location: {$location}");
+			exit;
+		}
+	}
+	
 ?>

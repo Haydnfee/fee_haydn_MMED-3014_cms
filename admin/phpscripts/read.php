@@ -1,34 +1,52 @@
 <?php
-    function getAll($tbl) {
+	function getAll($tbl) {
+		include('connect.php');
+		$queryAll = "SELECT * FROM {$tbl}";
+		$runAll = mysqli_query($link, $queryAll);
+		if ($runAll) {
+			return $runAll;
+		} else {
+			$error = "An error occured while accessing this information. Please contact your admin.";
+			return $error;
+		}
+
+		mysqli_close($link);
+	}
+
+	function getSingle($tbl, $col, $id) {
+		include('connect.php');
+		$querySingle = "SELECT * FROM {$tbl} WHERE {$col} = {$id}";
+		$runSingle = mysqli_query($link, $querySingle);
+
+		if($runSingle){
+			return $runSingle;
+
+			} else {
+			$error = "An error occured while accessing this information. Please contact your admin.";
+			return $error;
+		}
+
+		mysqli_close($link);
+	}
+
+function filtertype($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter) {
+
+
         include('connect.php');
-        $queryAll = "SELECT * FROM {$tbl}";
-        $runAll = mysqli_query($link, $queryAll);
-        if ($runAll) {
-            return $runAll;
-        } else {
-            $error = "There was a problem accessing the server.";
-            return $error;
-        }
+        $queryFilter = "SELECT * FROM {$tbl}, {$tbl2}, {$tbl3}
+                    WHERE {$tbl}.{$col} = {$tbl3}.{$col} 
+                    AND {$tbl2}.{$col2} = {$tbl3}.{$col2} 
+                    AND {$tbl2}.{$col3} = '{$filter}'";
+    $runFilter = mysqli_query($link, $queryFilter);
 
-        mysqli_close($link);
-    }
-
-    function getSingleMov($tbl, $col, $id) {
-        include('connect.php');
-    $querySingle = "SELECT * FROM {$tbl} WHERE {$col} = {$id}";
-
-    $runsingle = mysqli_query($link, $querySingle);
-
-    if($runSingle){
-        return $runSingle;
-        } else {
-        $error = "There was a problem accessing the server.";
+    if($runFilter){
+        return $runFilter;
+    }else{
+        $error = "There was error accessing this information. Please contact your admin.";
         return $error;
     }
 
     mysqli_close($link);
-}
+    }
 
-
-
-?>
+    ?>

@@ -27,16 +27,15 @@
     <link href="../css/app.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-    <h1>Login with your admin login information</h1>
-
+    <h1>Admin Login</h1>
     <form action="admin_login.php" method="post">
-    <lable>Username:</label>
-    <input type="text" name="username" value="">
+        <lable>Username:</label>
+        <input type="text" name="username" value="">
         <br>
-    <lable>Password:</label>
-    <input type="text" name="password" value="">
+        <lable>Password:</label>
+        <input type="text" name="password" value="">
         <br>
-    <input type="submit" name="submit" value="User Login">
+        <input type="submit" name="submit" value="User Login">
     </form>
 </body>
 </html>
