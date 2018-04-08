@@ -25,6 +25,7 @@ if(isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <title>CMS Edit User</title>
+	<link href="../css/app.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
     <h1>Edit an Existing User</h1>

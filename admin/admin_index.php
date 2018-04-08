@@ -15,7 +15,7 @@ confirm_logged_in();
     <link href="../css/app.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-    <h1>Welcome to your admin page</h1>
+    <h1>Admin Home</h1>
         <!-- <?php 
         
         echo "<h2>Welcome {$_SESSION['user_name']}</h2>";
@@ -26,13 +26,15 @@ confirm_logged_in();
         SET user_lastLogin = '$date'
         WHERE user_id={$_SESSION['user_id']}";
 
-        $updatequery = mysqli_query($link, $updatestring); //$link undefined-cant update db
+        $updatequery = mysqli_query($link, $updatestring);
         
         ?> -->
-
+        <div id="homeNav">
         <a href="admin_createuser.php">Create a User Account</a>
         <a href="admin_editUser.php">Edit User</a>
-		<a href="admin_deleteUser.php">Delete User</a>		
+		<a href="admin_deleteUser.php">Delete User</a>	
+        <a href="admin_addMovie.php">Add Movie</a>	
 		<a href="phpscripts/caller.php?caller_id=logout">Sign Out</a>
+        </div>
 </body>
 </html>

@@ -35,7 +35,7 @@
         <lable>Password:</label>
         <input type="text" name="password" value="">
         <br>
-        <input type="submit" name="submit" value="User Login">
+        <input id="logBTN" type="submit" name="submit" value="User Login">
     </form>
 </body>
 </html>

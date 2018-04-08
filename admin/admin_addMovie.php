@@ -27,10 +27,12 @@ if(isset($_POST['submit'])) {
 <head>
 <meta charset="UTF-8">
 <title>CMS Portal</title>
+<link href="../css/app.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
 	<h1>Add movie to site</h1>
 	<?php if (!empty($message)){echo $message;} ?>
+	<div id="addMovie">
 	<form action="admin_addMovie.php" method="post" enctype="multipart/form-data">
 		<label>Movie Title:</label>
 		<input type="text" name="title" value=""><br><br>
@@ -56,5 +58,6 @@ if(isset($_POST['submit'])) {
 		</select><br><br>
 		<input type="submit" name="submit" value="Add Movie">
 	</form>
+	</div>
 </body>
 <html>

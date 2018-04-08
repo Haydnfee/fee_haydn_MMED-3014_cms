@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
 <head>
 <meta charset="UTF-8">
 <title>User Creation</title>
-<link href="../css/main.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../css/app.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
     <h1>Create an additional user.</h1>
