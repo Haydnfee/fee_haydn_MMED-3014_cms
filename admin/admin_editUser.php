@@ -31,13 +31,13 @@ if(isset($_POST['submit'])) {
     <h1>Edit an Existing User</h1>
     <?php if(!empty($message)){echo $message;} ?>
 		<form action="admin_editUser.php" method="post">
-		<lable>First Name:</lable>
+		<label>First Name:</label>
 		<input type="text" name="fname" value="<?php echo $found_user['user_fname']; ?>"><br><br>
-		<lable>Username:</lable>
+		<label>Username:</label>
 		<input type="text" name="username" value="<?php echo $found_user['user_name']; ?>"><br><br>
-		<lable>Password:</lable>
+		<label>Password:</label>
 		<input type="text" name="password" value="<?php echo $found_user['user_pass']; ?>"><br><br>
-		<lable>Email:</lable>
+		<label>Email:</label>
 		<input type="text" name="email" value="<?php echo $found_user['user_email']; ?>"><br><br>
 		<input type="submit" name="submit" value="Edit User">		
 

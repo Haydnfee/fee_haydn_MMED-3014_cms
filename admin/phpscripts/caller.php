@@ -8,6 +8,9 @@
         }else if($dir == 'delete'){
             $id = $_GET['id'];
             deleteUser($id);
+        }else if($dir == 'edit'){
+            $id = $_GET['id'];
+            deleteUser($id);
         }else {
             echo "Caller ID was passed incorrectly";
         }

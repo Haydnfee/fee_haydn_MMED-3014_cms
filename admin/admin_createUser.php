@@ -31,15 +31,15 @@ if(isset($_POST['submit'])) {
     <h1>Create an additional user.</h1>
     <?php if(!empty($message)){echo $message;}?>
     <form id="createForm" action="admin_createUser.php" method="post">
-		<lable>First Name:</lable>
+		<label>First Name:</label>
 		<input type="text" name="fname" value="<?php if(!empty($fname)){echo $fname;} ?>"><br><br>
-		<lable>Username:</lable>
+		<label>Username:</label>
 		<input type="text" name="username" value="<?php if(!empty($username)){echo $username;} ?>"><br><br>
-		<lable>Password:</lable>
+		<label>Password:</label>
 		<input type="text" name="password" value="<?php if(!empty($password)){echo $password;} ?>"><br><br>
-		<lable>Email:</lable>
+		<label>Email:</label>
 		<input type="text" name="email" value="<?php if(!empty($email)){echo $email;} ?>"><br><br>
-		<lable>User Level:</lable>
+		<label>User Level:</label>
 		<select name="userlvl">
 			<option value="">Please select a user level
 			</option>
